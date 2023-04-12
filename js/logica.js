@@ -2,13 +2,13 @@ const texto = document.getElementById("texto");
 const btnEncriptar = document.getElementById("btnencriptar");
 const txtEncriptado = document.getElementById("textoEncriptado");
 
-function Encriptar(){
+function encriptar(){
 
     let encriptado = texto.value + "este  texto se encuentra encriptado.";
     txtEncriptado.value = encriptado;   
 }
 
-btnEncriptar.onclick = Encriptar;
+btnEncriptar.onclick = encriptar;
 
 
 /*
