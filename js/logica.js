@@ -1,17 +1,19 @@
-const texto = document.getElementById("texto");
-const btnEncriptar = document.getElementById("btnEncriptar");
-const txtEncriptado = document.getElementById("textoEncriptado");
+//const texto = document.getElementById("texto");
+var btnEncriptar = document.querySelector(".button");
+//const txtEncriptado = document.getElementById("textoEncriptado");
 
-function encriptar(){
+btnEncriptar.onclick = alert("hola");
 
-    let encriptado = texto.value + "este  texto se encuentra encriptado.";
-    txtEncriptado.value = encriptado;   
-}
-
-btnEncriptar.onclick = encriptar;
 
 
 /*
+function encriptar(){
+
+    let encriptado = texto.value + "este  texto se encuentra encriptado.";
+    txtEncriptado.value = encriptado;
+    alert("Texto encriptado con exito.");   
+}
+
 function Desencriptar(){
     let texto = document.getElementById("textoEncriptado").value;
     let desencriptado = "";
