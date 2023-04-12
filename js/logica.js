@@ -1,5 +1,5 @@
 const texto = document.getElementById("texto");
-const btnEncriptar = document.getElementById("btnencriptar");
+const btnEncriptar = document.getElementById("btnEncriptar");
 const txtEncriptado = document.getElementById("textoEncriptado");
 
 function encriptar(){
