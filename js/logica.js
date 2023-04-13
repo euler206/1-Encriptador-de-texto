@@ -2,7 +2,7 @@ const texto = document.getElementById("texto").value;
 const btn = document.getElementById("btn");
 const txtEncriptado = document.getElementById("textoEncriptado");
 
-btn.onclick = function () {
+document.getElementById("btn").onclick = function () {
     txtEncriptado.value = "";
     txtEncriptado.value = encriptar(texto);
 };
@@ -19,7 +19,7 @@ function encriptar(texto){
     }
     console.log(texto);
    return texto;
-}
+};
 /*
 function Desencriptar(){
     let texto = document.getElementById("textoEncriptado").value;
