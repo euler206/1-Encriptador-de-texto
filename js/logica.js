@@ -2,11 +2,6 @@ const texto = document.getElementById("texto").value;
 const btn = document.getElementById("btn");
 const txtEncriptado = document.getElementById("textoEncriptado");
 
-document.getElementById("btn").onclick = function () {
-    txtEncriptado.value = "";
-    txtEncriptado.value = encriptar(texto);
-};
-
 
 function encriptar(texto){
     let llave = [["e" , "enter"],["i" , "imes"],["a" , "ai"],["o" , "ober"],["u" , "ufat"]];
@@ -18,12 +13,16 @@ function encriptar(texto){
 
     }
     console.log(texto);
-   return texto;
+    return texto;
 };
-/*
-function Desencriptar(){
-    let texto = document.getElementById("textoEncriptado").value;
-    let desencriptado = "";
-    document.getElementById("textoEncriptado").value = "TEXTO DESENCRIPTADO.";
+
+document.getElementById("btn").onclick = function () {
+    txtEncriptado.value = "";
+    txtEncriptado.value = encriptar(texto);
+
+    
+};
+
+document.getElementById("btnDesencriptar").onclick = function () {
+    txtEncriptado.value = "hola!!";
 }
-*/
