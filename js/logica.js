@@ -1,10 +1,11 @@
-//const texto = document.getElementById("texto");
-var btnEncriptar = document.querySelector(".button");
-//const txtEncriptado = document.getElementById("textoEncriptado");
+const texto = document.getElementById("texto");
+const btn = document.querySelector("btn");
+const txtEncriptado = document.getElementById("textoEncriptado");
 
-btnEncriptar.onclick = alert("hola");
-
-
+document.getElementById("btn").onclick = function () {
+  textoEncriptado.value = texto.value +"TEXTO";
+  console.log(textoEncriptado.value)
+};
 
 /*
 function encriptar(){
