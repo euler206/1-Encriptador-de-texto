@@ -1,5 +1,5 @@
 const texto = document.getElementById("texto").value;
-const btn = document.getElementById("btn");
+//const btnbtnEncriptar = document.getElementById("btnEncriptar"); //const btnbtnEncriptar = no FUNCA
 const txtEncriptado = document.getElementById("textoEncriptado");
 
 
@@ -16,13 +16,14 @@ function encriptar(texto){
     return texto;
 };
 
-document.getElementById("btn").onclick = function () {
-    txtEncriptado.value = "";
-    txtEncriptado.value = encriptar(texto);
+document.getElementById("btnEncriptar").onclick = () => txtEncriptado.value = encriptar(texto);
+// al reemplazar document.getElementById("btnEncriptar") por la variable btnEncriptar, no FUNCA
+//  ===>  btnEncriptar.onclick = function () {  // al reemplazar document.getElementById("btnEncriptar") por la variable btnEncriptar, no FUNCA
+//    txtEncriptado.value = "";
+    
 
     
-};
 
-document.getElementById("btnDesencriptar").onclick = function () {
-    txtEncriptado.value = "hola!!";
-}
+
+document.getElementById("btnDesencriptar").onclick = () => txtEncriptado.value = "hola!!";
+
