@@ -1,22 +1,22 @@
-const texto = document.getElementById("texto").value;
-//const btnbtnEncriptar = document.getElementById("btnEncriptar"); //const btnbtnEncriptar = no FUNCA
+const texto = document.getElementById("texto");
+const btnbtnEncriptar = document.getElementById("btnEncriptar"); //const btnbtnEncriptar = no FUNCA
 const txtEncriptado = document.getElementById("textoEncriptado");
 
 
-function encriptar(texto){
+function encriptar(mensaje){
     let llave = [["e" , "enter"],["i" , "imes"],["a" , "ai"],["o" , "ober"],["u" , "ufat"]];
-    texto = texto.toLowerCase();
+    mensaje = mensaje.toLowerCase();
     for (let i=0; i<llave.length; i++){
-        if(texto.includes(llave[i][0])){
-            texto = texto.replaceAll(llave[i][0], llave[i][1]);
+        if(mensaje.includes(llave[i][0])){
+            mensaje = mensaje.replaceAll(llave[i][0], llave[i][1]);
         }
-
     }
-    console.log(texto);
-    return texto;
+    return mensaje;
 };
 
-document.getElementById("btnEncriptar").onclick = () => txtEncriptado.value = encriptar(texto);
+
+btnbtnEncriptar.onclick = () => txtEncriptado.value = encriptar(texto.value);
+//document.getElementById("btnEncriptar").onclick = () => txtEncriptado.value = encriptar(texto.value);
 // al reemplazar document.getElementById("btnEncriptar") por la variable btnEncriptar, no FUNCA
 //  ===>  btnEncriptar.onclick = function () {  // al reemplazar document.getElementById("btnEncriptar") por la variable btnEncriptar, no FUNCA
 //    txtEncriptado.value = "";
@@ -25,5 +25,5 @@ document.getElementById("btnEncriptar").onclick = () => txtEncriptado.value = en
     
 
 
-document.getElementById("btnDesencriptar").onclick = () => txtEncriptado.value = "hola!!";
+//document.getElementById("btnDesencriptar").onclick = () => txtEncriptado.value = "hola!!";
 
