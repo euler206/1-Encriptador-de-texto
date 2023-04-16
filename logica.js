@@ -13,21 +13,5 @@ function encriptar(mensaje,op) {
 
 btnEncriptar.onclick = () => txtEncriptado.value = encriptar(texto.value,1); // 1 = true para encriptar
 btnDesencriptar.onclick = () => txtEncriptado.value = encriptar(texto.value,0); // 0 = false para desencriptar
-btnCopiar.onclick = () => txtEncriptado.select();
+btnCopiar.onclick = () => navigator.clipboard.writeText(txtEncriptado.value);
 
-
-
-
-
-/*
-function encriptar(mensaje) {
-    mensaje = mensaje.toLowerCase();
-    llave.forEach(([enc, des]) => mensaje = mensaje.replaceAll(enc, des));
-    return mensaje;
-};
-function desencriptar(mensaje) {
-    mensaje = mensaje.toLowerCase();
-    llave.forEach(([enc, des]) => mensaje = mensaje.replaceAll(des, enc));
-    return mensaje;
-};
-*/
