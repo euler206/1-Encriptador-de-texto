@@ -80,7 +80,7 @@ color: #0A3871;
 	order: 1;
 	flex-grow: 0;
 }
-
+/*
 .mensaje-copy{
 	background: #000;
 	color: #fff;
@@ -94,10 +94,11 @@ color: #0A3871;
 	align-items: center;
 	font-weight: 900;
 	font-size: 2rem;
-	visibility: 0;
-	opacity: 0.7;	
+	visibility: 1;
+	opacity: 1;	
+	
 }
-
+*/
 .botones{
 	border-radius: 24px;
 }

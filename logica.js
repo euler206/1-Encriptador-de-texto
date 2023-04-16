@@ -11,7 +11,15 @@ function encriptar(mensaje,op) {
     return mensaje;
 };
 
+function copiar() {
+    navigator.clipboard.writeText(txtEncriptado.value);
+    btnCopiar.innerText = "Pegar";
+}
+function pegar() {
+    navigator.clipboard.readText().then(tex => texto.value = tex);
+    btnCopiar.innerText = "Copiar";
+}
+
 btnEncriptar.onclick = () => txtEncriptado.value = encriptar(texto.value,1); // 1 = true para encriptar
 btnDesencriptar.onclick = () => txtEncriptado.value = encriptar(texto.value,0); // 0 = false para desencriptar
-btnCopiar.onclick = () => navigator.clipboard.writeText(txtEncriptado.value);
-
+btnCopiar.onclick = () => btnCopiar.innerText === "Copiar" ? copiar() : pegar();
