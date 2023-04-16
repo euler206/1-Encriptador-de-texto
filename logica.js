@@ -10,15 +10,14 @@ function encriptar(mensaje,op) {
     llave.forEach(([enc, des]) => mensaje = op ? mensaje.replaceAll(enc, des): mensaje.replaceAll(des, enc));
     return mensaje;
 };
-
 function copiar() {
     navigator.clipboard.writeText(txtEncriptado.value);
     btnCopiar.innerText = "Pegar";
-}
+};
 function pegar() {
     navigator.clipboard.readText().then(tex => texto.value = tex);
     btnCopiar.innerText = "Copiar";
-}
+};
 
 btnEncriptar.onclick = () => txtEncriptado.value = encriptar(texto.value,1); // 1 = true para encriptar
 btnDesencriptar.onclick = () => txtEncriptado.value = encriptar(texto.value,0); // 0 = false para desencriptar
