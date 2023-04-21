@@ -10,11 +10,11 @@ function encriptar(mensaje,op) {
     llave.forEach(([enc, des]) => mensaje = op ? mensaje.replaceAll(enc, des): mensaje.replaceAll(des, enc));
     return mensaje;
 };
-function copiar() {
+const copiar = () => {
     navigator.clipboard.writeText(txtEncriptado.value);
     btnCopiar.innerText = "Pegar";
 };
-function pegar() {
+const pegar = () => {
     navigator.clipboard.readText().then(tex => texto.value = tex);
     btnCopiar.innerText = "Copiar";
 };
