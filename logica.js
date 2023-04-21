@@ -12,13 +12,13 @@ function encriptar(mensaje,op) {
 };
 const copiar = () => {
     navigator.clipboard.writeText(txtEncriptado.value);
-    btnCopiar.innerText = "Pegar";
+    //btnCopiar.innerText = "Pegar";
 };
 const pegar = () => {
     navigator.clipboard.readText().then(tex => texto.value = tex);
-    btnCopiar.innerText = "Copiar";
+    //btnCopiar.innerText = "Copiar";
 };
 
 btnEncriptar.onclick = () => txtEncriptado.value = encriptar(texto.value,1); // 1 = true para encriptar
 btnDesencriptar.onclick = () => txtEncriptado.value = encriptar(texto.value,0); // 0 = false para desencriptar
-btnCopiar.onclick = () => btnCopiar.innerText === "Copiar" ? copiar() : pegar();
+btnCopiar.onclick = () => btnCopiar.innerText === "Copiar" ? copiar(), btnCopiar.innerText = "Pegar" : pegar(), btnCopiar.innerText = "Copiar";
