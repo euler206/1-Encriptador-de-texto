@@ -19,9 +19,9 @@ main {
 .logo{
 	left: 36.67%;
 	right: 37.43%;
-	top: 0%;
+	top: 10%;
 	bottom: 0%;
-background: #0A3871;
+	background: #E5E5E5;
 }
 .logo-github{
 	width:  5%;
