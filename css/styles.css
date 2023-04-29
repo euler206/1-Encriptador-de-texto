@@ -47,8 +47,6 @@ main {
 }
 .mensaje:focus {
 	outline: none;
-}
-.mensaje:not(:empty){
 	background-image: none;
 }
 
@@ -88,20 +86,23 @@ main {
 	margin-top: 402px;
 	position: absolute;
 	width: 336px;
-}
-/* Cambiar el color de fondo del botón cuando el texto es "copiar" */
-.btn-copiar-pegar:contains("Copiar") {
-	background: white;
-	color: #0A3871;
-}
-
-/* Cambiar el color de fondo del botón cuando el texto es "pegar" */
-.btn-copiar-pegar:contains("Pegar") {
-	background: #0A3871;
-	color: white;
+	visibility: hidden;
 }
 
 .aviso{
 	color: #495057;
 	font-size: 18px;
+}
+
+
+/* NO FUNCA */
+/* Cambiar el color de fondo del botón cuando el texto es "copiar" */
+.btn-copiar-pegar:contains("Copiar") {
+	background: white;
+	color: #0A3871;
+}
+/* Cambiar el color de fondo del botón cuando el texto es "pegar" */
+.btn-copiar-pegar:contains("Pegar") {
+	background: #0A3871;
+	color: white;
 }
