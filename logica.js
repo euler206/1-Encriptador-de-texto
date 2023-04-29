@@ -19,13 +19,13 @@ btnEncriptar.onclick = function (){
     mensaje.value = encriptar(texto.value,1);// 1 = true para encriptar
     texto.value = "";
     btnCopiarPegar.style.visibility = "visible";
-    mensaje.focus()
+    //mensaje.focus()
 } 
 btnDesencriptar.onclick = function () {
     if (texto.value === "") return;
     mensaje.value = encriptar(texto.value,0); // 0 = false para desencriptar
     texto.value = "";
-    mensaje.focus()
+    //mensaje.focus()
 }
 btnCopiarPegar.onclick = function () {
         if (btnCopiarPegar.innerText === "Copiar"){
