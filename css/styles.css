@@ -26,16 +26,14 @@ main {
 	margin-top: 90px;
 	text-transform: lowercase;
 }
-::placeholder{
-	color: #0A3871;
-}
-.text-area:focus {
-	outline: none;
-}
+::placeholder{	color: #90a3bd; }
+	.text-area:focus {
+		outline: none;
+	}
 
 .mensaje{
 	background: white;
-	background-image: url("/images/munheco.png");
+	background-image: url("../images/munheco.png");
 	background-repeat: no-repeat;
 	border: none;
 	border-radius: 24%;
@@ -47,10 +45,9 @@ main {
 }
 .mensaje:focus {
 	outline: none;
-	background-image: none;
 }
 
-.botonera{
+.botones{
 	display: flex;
 	margin-top: 18px;
 }
@@ -65,6 +62,7 @@ main {
 	margin-left: 30px;
 	width: 328px;
 }
+
 .btn-desencriptar{
 	background: #D8DFE8;
 	border: 1px solid #0A3871;
@@ -86,7 +84,8 @@ main {
 	margin-top: 402px;
 	position: absolute;
 	width: 336px;
-	visibility: hidden;
+	display: none;
+	/*visibility: hidden;*/
 }
 
 .aviso{
@@ -94,6 +93,9 @@ main {
 	font-size: 18px;
 }
 
+.ocultar{
+	display: none;
+}
 
 /* NO FUNCA */
 /* Cambiar el color de fondo del botón cuando el texto es "copiar" */

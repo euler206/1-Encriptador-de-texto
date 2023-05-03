@@ -17,14 +17,14 @@ const pegar = () => navigator.clipboard.readText().then(tex => texto.value = tex
 btnEncriptar.onclick = function (){
     if (texto.value === "") return;
     mensaje.value = encriptar(texto.value,1);// 1 = true para encriptar
-    texto.value = "";
-    btnCopiarPegar.style.visibility = "visible";
+    //texto.value = "";
+    //btnCopiarPegar.style.visibility = "visible";
     //mensaje.focus()
 } 
 btnDesencriptar.onclick = function () {
     if (texto.value === "") return;
     mensaje.value = encriptar(texto.value,0); // 0 = false para desencriptar
-    texto.value = "";
+    //texto.value = "";
     //mensaje.focus()
 }
 btnCopiarPegar.onclick = function () {
@@ -34,7 +34,7 @@ btnCopiarPegar.onclick = function () {
         } else{
             pegar();
             btnCopiarPegar.innerText = "Copiar";
-            btnCopiarPegar.style.visibility = "hidden";
+            //btnCopiarPegar.style.visibility = "hidden";
         }
         mensaje.value = "";
     };
