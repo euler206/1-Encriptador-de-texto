@@ -20,6 +20,7 @@ btnEncriptar.onclick = function (){
     //texto.value = "";
     //btnCopiarPegar.style.visibility = "visible";
     //mensaje.focus()
+    btnCopiarPegar.classList.toggle("mostrar");
 } 
 btnDesencriptar.onclick = function () {
     if (texto.value === "") return;

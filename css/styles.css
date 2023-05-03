@@ -46,6 +46,9 @@ main {
 .mensaje:focus {
 	outline: none;
 }
+.mensaje:target{
+	background-image: none;
+}
 
 .botones{
 	display: flex;
@@ -85,7 +88,6 @@ main {
 	position: absolute;
 	width: 336px;
 	display: none;
-	/*visibility: hidden;*/
 }
 
 .aviso{
@@ -93,8 +95,8 @@ main {
 	font-size: 18px;
 }
 
-.ocultar{
-	display: none;
+.mostrar{
+	display: block;
 }
 
 /* NO FUNCA */
