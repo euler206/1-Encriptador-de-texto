@@ -13,6 +13,7 @@ function encriptar(text,op) {
 };
 const copiar = () => navigator.clipboard.writeText(mensaje.value);
 const pegar = () => navigator.clipboard.readText().then(tex => texto.value = tex);
+const setTextBoton = (textBoton) => btnCopiarPegar.innerText = textBoton;
 
 btnEncriptar.onclick = function (){
     if (texto.value === "") return;
@@ -31,10 +32,10 @@ btnDesencriptar.onclick = function () {
 btnCopiarPegar.onclick = function () {
         if (btnCopiarPegar.innerText === "Copiar"){
             copiar();
-            btnCopiarPegar.innerText = "Pegar";
+            setTextBoton("Pegar");
         } else{
             pegar();
-            btnCopiarPegar.innerText = "Copiar";
+            setTextBoton("Copiar");
             //btnCopiarPegar.style.visibility = "hidden";
         }
         mensaje.value = "";
